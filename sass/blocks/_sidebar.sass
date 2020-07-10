@@ -1,0 +1,170 @@
+.logo
+    background: url(../img/logo.png) no-repeat
+    background-position: center
+    background-size: 80%
+    height: 47px
+.menu-btn
+    position: absolute
+    top: 50px
+    right: 30px
+    display: none
+    span
+        position: absolute
+        top: 50%
+        margin-top: -1px
+        left: 50%
+        margin-left: -10px
+        width: 30px
+        height: 2px
+        background-color: $primary-text
+    &::before
+        content: ''
+        display: block
+        transform: translateY(-10px)
+        position: absolute
+        top: 50%
+        margin-top: -1px
+        left: 50%
+        margin-left: -10px
+        width: 30px
+        height: 2px
+        background-color: $primary-text
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        margin-top: -1px
+        left: 50%
+        margin-left: -10px
+        width: 30px
+        height: 2px
+        background-color: $primary-text
+        transform: translateY(10px)
+    @media ( max-width:  425px)
+        display: block
+.sidebar
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1)
+    width: 20%
+    background-color: #fff
+    float: left
+    padding-top: 25px
+    &-menu
+        list-style: none
+        max-width: 80%
+        margin: 25px auto
+        li
+            position: relative
+            &:hover
+                .sidebar-submenu
+                    opacity: 1
+                    visibility: visible
+                    animation: moveFromRight 0.3s linear
+                .sidebar-menu-link
+                    background-color: #fff
+                    border: none
+                    &__svg
+                        fill: $secondary-bg
+                    &__text
+                        color: $secondary-bg 
+                       
+        &-link
+            display: block
+            background-color: #F8F8F8
+            text-decoration: none
+            +semibold
+            font-size: 1.6rem
+            color: $primary-text
+            border-top: 1px solid #ececec
+            display: flex
+            align-items: center
+            min-width: 80%
+            justify-content: space-between
+            height: 54px
+            &:last-of-type
+                border-bottom: 1px solid #ececec
+            &:hover
+                background-color: #fff
+                border: none
+                .sidebar-menu-link__svg
+                    fill: $secondary-bg
+                .sidebar-menu-link__text
+                    color: $secondary-bg 
+                       
+            &__text
+                flex-basis: 80%
+                padding-right: 5px
+                margin-left: 10px
+                min-width: 80%
+                transition: 0.3s  
+                padding-right: 25px
+            &__svg
+                flex-basis: 25%
+                min-width: 25%
+                text-align: center
+                fill: #3C3C3B
+                transition: 0.3s
+    &-submenu
+        position: absolute
+        top: 0
+        left: 100%
+        list-style: none
+        width: 100%
+        opacity: 0
+        visibility: hidden
+        &-link
+            background-color: #F8F8F8
+            text-decoration: none
+            +semibold
+            font-size: 1.4rem
+            color: $primary-text
+            border-top: 1px solid #ececec
+            border-left: 1px solid #ececec
+            display: flex
+            align-items: center
+            min-width: 80%
+            justify-content: space-between
+            height: 54px 
+            transition: 0.2s                         
+            &:last-of-type
+                border-bottom: 1px solid #ececec
+            &:hover
+                background-color: $secondary-bg
+                border: none
+                .sidebar-submenu-link__svg
+                    fill: $secondary-text
+                .sidebar-submenu-link__text
+                    color: $secondary-text                  
+            &__text
+                flex-basis: 80%
+                padding-right: 25px
+                margin-left: 10px
+                min-width: 80%
+                transition: 0.3s                      
+            &__svg
+                transition: 0.3s
+                flex-basis: 20%
+                min-width: 20%
+                text-align: center
+                fill: #3C3C3B     
+@media  (max-width: 428px)
+    .logo
+        background-size: 50%
+        background-position: 10px
+    .sidebar
+        width: 100%
+        justify-content: center
+        margin-bottom: 15px
+        box-shadow: none
+        &-menu
+            display: none
+        &-submenu
+            display: none
+        &::after
+            content: ''
+            width: 100%
+            height: 2px
+            background-color: $secondary-bg
+            display: block
+
+                

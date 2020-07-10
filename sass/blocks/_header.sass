@@ -1,0 +1,266 @@
+.header
+    width: 80%
+    display: flex
+    position: fixed
+    top: 0
+    right: 0
+    background-color: #fff
+    @media  (max-width: 428px)
+        position: static
+        order: 2
+        width: 100%
+.navigation
+    flex-basis: 50% 
+    @media  (max-width: 1280px)
+        flex-basis: 75%
+    
+    &-wrapper
+        display: flex
+        flex-basis: 90%
+        justify-content: center
+        margin-top: 20px
+    &-menu
+        display: flex
+        flex-basis: 90%
+        list-style: none
+        justify-content: space-around
+        font-size: 1.4rem
+        letter-spacing: 0.06em
+        margin: 10px 0
+        li
+            position: relative
+            &:hover
+                .navigation-menu__link
+                    color: $secondary-bg
+                .navigation-menu__button
+                    fill: $secondary-bg
+                .navigation-submenu
+                    visibility: visible
+                    opacity: 1
+                    animation: moveFromDown 0.5s linear
+            &::after
+                content: ''
+                width: 100%
+                height: 2px
+                background-color: $secondary-bg
+                display: block
+                transition: .7s
+                transform-origin: center
+                transform: translateY(15px) scale(0)
+        &__button
+            margin-left: 10px
+            transition: 0.5s
+            
+        &__link 
+            text-decoration: none
+            cursor: pointer
+            color: $primary-text
+            +regular  
+            display: flex
+            padding-left: 5px   
+        @media  (max-width: 428px)
+            display: none                   
+    &-submenu
+        width: 140%
+        list-style: none
+        position: absolute
+        padding-top: 10px
+        top: 17px
+        left: -5px
+        z-index: 3
+        opacity: 0
+        visibility: hidden
+        background-color: #fff
+        padding-left: 5px
+        &__link
+            display: block
+            text-decoration: none
+            cursor: pointer
+            color: $primary-text  
+            +regular
+            padding: 15px 0 15px 5px
+            &:hover
+                background-color: $secondary-bg
+                color: $secondary-text
+    &-search
+        margin: 0 auto
+        display: flex
+        background-color: #f8f8f8
+        justify-content: center
+        padding: 8px 0    
+        &__input
+            border: 1px solid #E0E0E0
+            width: 70%
+            +regular
+            font-size: 1.4rem
+            padding: 10px
+        &-button
+            background-color: #3C3C3B
+            margin-left: -5px
+            display: flex
+            padding: 10px 30px
+            align-items: center
+            text-decoration: none
+            &__text
+                color: $secondary-text
+                margin-left: 8px
+                +regular
+                font-size: 1.4rem
+            &__svg
+                fill: $secondary-text                        
+.feedback
+    flex-basis: 50%
+    background-color: $secondary-bg
+    display: flex
+    &-contacts, a
+        +regular
+        color: $secondary-text
+    &-contacts
+        margin: auto
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &__free
+            display: block
+            font-size: 1.2rem
+        &__phone
+            display: block
+            font-size: 1.8rem
+            text-decoration: none
+            margin: 5px 0
+        &-city
+            display: flex
+            text-decoration: none
+            &__name
+                border-bottom: 1px dashed
+                font-size: 1.2rem
+                display: block
+                margin-left: 10px
+.functions
+    border-right: 1px solid rgba(255, 255, 255, 0.25)
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+    display: flex
+    flex-basis: 45%
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-around
+    @media  (max-width: 1280px)
+        flex-basis: 30%
+    &-item
+        text-decoration: none
+        display: flex
+        flex-basis: 20% 
+        flex-direction: column
+        align-items: center
+        position: relative 
+        &:last-of-type
+            margin-right: 0            
+        span
+            color: $secondary-text
+            +semibold  
+            position: absolute  
+            font-size: 1.3rem  
+        &__text
+            color: $secondary-text
+            margin-top: 5px
+            +regular
+            font-size: 1.2rem
+        &__svg
+            fill: #ffffff
+            &-stroke
+                stroke: #ffffff                         
+        @media  (max-width: 1280px)
+            margin: 10px
+            &:last-of-type
+                margin-right: 10px
+            &__text
+                display: none
+.favorites__counter
+    top: -10px
+    right: 25%
+.comparison__counter
+    top: -11px
+    right: 20%
+.basket__counter
+    top: -10px
+    right: 20%
+.consultation
+    background-color: #3C3C3B
+    display: flex
+    flex: 0 1 30%
+    justify-content: center
+    &__button
+        text-align: left
+        font-size: 1.8rem
+        text-decoration: none
+        border: none
+        background-color:  transparent
+        cursor: pointer  
+        color: $secondary-text
+        +regular     
+        outline: none
+        line-height: 25px
+    &__small
+        display: none
+        cursor: pointer  
+        color: $secondary-text
+        +semibold
+        background-color:  transparent
+        font-size: 1.4rem
+        text-decoration: none
+        border: none
+        padding: 9px 22px
+@media  (max-width: 1280px)
+    .comparison__counter, .basket__counter, .favorites__counter
+        right: -5px
+@media ( max-width: 428px )
+    .navigation
+        flex-basis: 10%
+        align-items: center
+        &-wrapper
+            margin-top: 10px
+        &-search
+            padding: 0
+            background-color: #fff
+            &__input
+                display: none
+            &-button
+                padding: 0
+                padding-top: 2px
+                background-color: #fff
+                margin-left: 5px
+                &__text
+                    display: none
+                &__svg
+                    fill: $primary-text
+                    width: 19px
+                    height: 19px
+    .functions
+        display: flex
+        flex-basis: 5%
+        flex-wrap: nowrap
+        background-color: #fff
+        &-item
+            margin: 10px 7px
+            span
+                color: $primary-text
+            &__svg
+                fill: $primary-text
+                &-stroke
+                    stroke: $primary-text
+    .feedback
+        background: none
+        flex-basis: 88%
+        justify-content: space-between
+        &-contacts
+            display: none
+    .consultation
+        flex-basis: 50%
+        &__button
+            display: none
+        &__small
+            display: block
+    
+       
+
+    
