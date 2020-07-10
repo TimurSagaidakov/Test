@@ -12,8 +12,7 @@
 .navigation
     flex-basis: 50% 
     @media  (max-width: 1280px)
-        flex-basis: 75%
-    
+        flex-basis: 75%    
     &-wrapper
         display: flex
         flex-basis: 90%
@@ -21,12 +20,23 @@
         margin-top: 20px
     &-menu
         display: flex
-        flex-basis: 90%
+        flex-basis: 100%
         list-style: none
         justify-content: space-around
         font-size: 1.4rem
         letter-spacing: 0.06em
-        margin: 10px 0
+        margin: 10px 0 10px -10%
+        &.mobile
+            position: fixed
+            top: 12%
+            left: 10%
+            display: block
+            width: 100%
+            height: 100vh
+            background-color: #fff
+            font-size: 14px
+            margin-top: -25px
+            z-index: 1000
         li
             position: relative
             &:hover
@@ -38,15 +48,6 @@
                     visibility: visible
                     opacity: 1
                     animation: moveFromDown 0.5s linear
-            &::after
-                content: ''
-                width: 100%
-                height: 2px
-                background-color: $secondary-bg
-                display: block
-                transition: .7s
-                transform-origin: center
-                transform: translateY(15px) scale(0)
         &__button
             margin-left: 10px
             transition: 0.5s
@@ -90,7 +91,7 @@
         padding: 8px 0    
         &__input
             border: 1px solid #E0E0E0
-            width: 70%
+            width: 72%
             +regular
             font-size: 1.4rem
             padding: 10px
@@ -107,7 +108,9 @@
                 +regular
                 font-size: 1.4rem
             &__svg
-                fill: $secondary-text                        
+                fill: $secondary-text    
+.mobile-menu__text
+    padding: 22px 14px                    
 .feedback
     flex-basis: 50%
     background-color: $secondary-bg
@@ -210,6 +213,8 @@
         text-decoration: none
         border: none
         padding: 9px 22px
+.mobile__hidden
+   display: none
 @media  (max-width: 1280px)
     .comparison__counter, .basket__counter, .favorites__counter
         right: -5px
@@ -260,7 +265,8 @@
             display: none
         &__small
             display: block
-    
+    .mobile__hidden
+        display: block
        
 
     

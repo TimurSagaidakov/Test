@@ -53,6 +53,14 @@
         list-style: none
         max-width: 80%
         margin: 25px auto
+        position: relative
+        &__button
+            transform: rotate(-90deg)
+            position: absolute
+            top: 20px
+            right: 10px
+            fill: $primary-text
+            display: none
         li
             position: relative
             &:hover
@@ -66,8 +74,7 @@
                     &__svg
                         fill: $secondary-bg
                     &__text
-                        color: $secondary-bg 
-                       
+                        color: $secondary-bg                       
         &-link
             display: block
             background-color: #F8F8F8
@@ -86,11 +93,11 @@
             &:hover
                 background-color: #fff
                 border: none
-                .sidebar-menu-link__svg
-                    fill: $secondary-bg
-                .sidebar-menu-link__text
-                    color: $secondary-bg 
-                       
+                .sidebar-menu
+                    &-link__svg
+                        fill: $secondary-bg
+                    &-link__text
+                        color: $secondary-bg                        
             &__text
                 flex-basis: 80%
                 padding-right: 5px
@@ -158,6 +165,22 @@
         box-shadow: none
         &-menu
             display: none
+            max-width: none
+            margin: 0
+            &.active
+                display: block
+                position: relative
+                z-index: 9999
+                width: 100%
+            &__button
+                display: block
+            &-link
+                &__text
+                    padding-right: 0
+                    min-width: 0
+                &__svg
+                    flex-basis: 14%
+                    min-width: 0
         &-submenu
             display: none
         &::after

@@ -108,12 +108,25 @@ li {
 
 .navigation-menu {
   display: flex;
-  flex-basis: 90%;
+  flex-basis: 100%;
   list-style: none;
   justify-content: space-around;
   font-size: 1.4rem;
   letter-spacing: 0.06em;
-  margin: 10px 0;
+  margin: 10px 0 10px -10%;
+}
+
+.navigation-menu.mobile {
+  position: fixed;
+  top: 12%;
+  left: 10%;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  font-size: 14px;
+  margin-top: -25px;
+  z-index: 1000;
 }
 
 .navigation-menu li {
@@ -132,17 +145,6 @@ li {
   visibility: visible;
   opacity: 1;
   animation: moveFromDown 0.5s linear;
-}
-
-.navigation-menu li::after {
-  content: '';
-  width: 100%;
-  height: 2px;
-  background-color: #95B03C;
-  display: block;
-  transition: .7s;
-  transform-origin: center;
-  transform: translateY(15px) scale(0);
 }
 
 .navigation-menu__button {
@@ -207,7 +209,7 @@ li {
 
 .navigation-search__input {
   border: 1px solid #E0E0E0;
-  width: 70%;
+  width: 72%;
   font-family: 'Roboto Regular';
   font-weight: normal;
   font-style: normal;
@@ -235,6 +237,10 @@ li {
 
 .navigation-search-button__svg {
   fill: #ffffff;
+}
+
+.mobile-menu__text {
+  padding: 22px 14px;
 }
 
 .feedback {
@@ -399,6 +405,10 @@ li {
   padding: 9px 22px;
 }
 
+.mobile__hidden {
+  display: none;
+}
+
 @media (max-width: 1280px) {
   .comparison__counter, .basket__counter, .favorites__counter {
     right: -5px;
@@ -467,6 +477,9 @@ li {
     display: none;
   }
   .consultation__small {
+    display: block;
+  }
+  .mobile__hidden {
     display: block;
   }
 }
@@ -542,6 +555,16 @@ li {
   list-style: none;
   max-width: 80%;
   margin: 25px auto;
+  position: relative;
+}
+
+.sidebar-menu__button {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  fill: #3C3C3B;
+  display: none;
 }
 
 .sidebar-menu li {
@@ -692,6 +715,25 @@ li {
   }
   .sidebar-menu {
     display: none;
+    max-width: none;
+    margin: 0;
+  }
+  .sidebar-menu.active {
+    display: block;
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+  }
+  .sidebar-menu__button {
+    display: block;
+  }
+  .sidebar-menu-link__text {
+    padding-right: 0;
+    min-width: 0;
+  }
+  .sidebar-menu-link__svg {
+    flex-basis: 14%;
+    min-width: 0;
   }
   .sidebar-submenu {
     display: none;
