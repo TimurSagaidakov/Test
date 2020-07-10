@@ -720,6 +720,7 @@ li {
   .sidebar-menu.active {
     display: block;
     position: fixed;
+    top: 130px;
     z-index: 9999;
     width: 100%;
   }
@@ -744,5 +745,18 @@ li {
     background-color: #95B03C;
     display: block;
   }
+}
+
+.menu__title {
+  font-size: 20px;
+  color: #3C3C3B;
+}
+
+.menu__title::after {
+  content: '';
+  width: 20%;
+  height: 2px;
+  display: block;
+  background-color: #95B03C;
 }
 /*# sourceMappingURL=style.css.map */
