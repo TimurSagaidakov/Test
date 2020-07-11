@@ -850,4 +850,16 @@ li {
   background-color: #fff;
   height: 100vh;
 }
+
+.buyer-active {
+  display: block;
+  visibility: visible;
+  position: absolute;
+  margin-top: 40px;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #fff;
+  height: 100vh;
+}
 /*# sourceMappingURL=style.css.map */
