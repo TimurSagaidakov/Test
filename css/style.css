@@ -205,6 +205,12 @@ li {
   transition: 0.5s;
 }
 
+@media (max-width: 428px) {
+  .navigation-menu__button {
+    display: none;
+  }
+}
+
 .navigation-menu__link {
   text-decoration: none;
   cursor: pointer;
@@ -377,7 +383,7 @@ li {
 .functions-item span {
   color: #ffffff;
   font-family: 'Roboto Medium';
-  font-weight: 700;
+  font-weight: normal;
   font-style: normal;
   position: absolute;
   font-size: 1.3rem;
@@ -454,7 +460,7 @@ li {
   cursor: pointer;
   color: #ffffff;
   font-family: 'Roboto Medium';
-  font-weight: 700;
+  font-weight: normal;
   font-style: normal;
   background-color: transparent;
   font-size: 1.4rem;
@@ -540,47 +546,6 @@ li {
   .mobile__hidden {
     display: block;
   }
-}
-
-.mobile-contacts {
-  position: fixed;
-  top: 70%;
-  left: 2%;
-  z-index: 5000;
-  display: none;
-}
-
-.mobile-contacts__free {
-  font-size: 14px;
-  font-family: 'Roboto Regular';
-  font-weight: normal;
-  font-style: normal;
-  color: #3C3C3B;
-}
-
-.mobile-contacts__phone {
-  font-family: 'Roboto Medium';
-  font-weight: 700;
-  font-style: normal;
-  font-size: 18px;
-  color: #3C3C3B;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  text-decoration: none;
-  display: block;
-}
-
-.mobile-contacts-city {
-  display: flex;
-  text-decoration: none;
-}
-
-.mobile-contacts-city__name {
-  color: #3C3C3B;
-  font-size: 14px;
-  margin-left: 10px;
-  text-decoration: none;
-  border-bottom: 1px dashed;
 }
 
 .logo {
@@ -694,7 +659,7 @@ li {
   background-color: #F8F8F8;
   text-decoration: none;
   font-family: 'Roboto Medium';
-  font-weight: 700;
+  font-weight: normal;
   font-style: normal;
   font-size: 1.6rem;
   color: #3C3C3B;
@@ -754,7 +719,7 @@ li {
   background-color: #F8F8F8;
   text-decoration: none;
   font-family: 'Roboto Medium';
-  font-weight: 700;
+  font-weight: normal;
   font-style: normal;
   font-size: 1.4rem;
   color: #3C3C3B;
@@ -817,13 +782,6 @@ li {
     max-width: none;
     margin: 0;
   }
-  .sidebar-menu.active {
-    display: block;
-    position: absolute;
-    top: 130px;
-    z-index: 9999;
-    width: 100%;
-  }
   .sidebar-menu__button {
     display: block;
   }
@@ -845,5 +803,29 @@ li {
     background-color: #95B03C;
     display: block;
   }
+}
+
+.catalog-active {
+  display: block;
+  visibility: visible;
+  position: absolute;
+  margin-top: 70px;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #fff;
+  height: 100vh;
+}
+
+.services-active {
+  display: block;
+  visibility: visible;
+  position: absolute;
+  margin-top: 10px;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #fff;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

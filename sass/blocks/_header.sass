@@ -51,7 +51,8 @@
         &__button
             margin-left: 10px
             transition: 0.5s
-            
+            @media ( max-width: 428px ) 
+                display: none               
         &__link 
             text-decoration: none
             cursor: pointer
@@ -270,33 +271,6 @@
             display: block
     .mobile__hidden
         display: block
-.mobile-contacts
-    position: fixed
-    top: 70%
-    left: 2%
-    z-index: 5000
-    display: none
-    &__free
-        font-size: 14px
-        +regular
-        color: $primary-text
-    &__phone
-        +semibold
-        font-size: 18px
-        color: $primary-text
-        margin-top: 5px
-        margin-bottom: 15px
-        text-decoration: none
-        display: block
-    &-city
-        display: flex
-        text-decoration: none
-        &__name
-            color: $primary-text
-            font-size: 14px
-            margin-left: 10px
-            text-decoration: none
-            border-bottom: 1px dashed
 
 
 
