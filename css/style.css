@@ -109,17 +109,6 @@ li {
   fill: #3C3C3B;
 }
 
-@-webkit-keyframes moveFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(40%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
 @keyframes moveFromRight {
   from {
     opacity: 0;
@@ -128,17 +117,6 @@ li {
   to {
     opacity: 1;
     transform: translateX(0%);
-  }
-}
-
-@-webkit-keyframes moveFromDown {
-  from {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
   }
 }
 
@@ -227,8 +205,7 @@ li {
 .navigation-menu li:hover .navigation-submenu {
   visibility: visible;
   opacity: 1;
-  -webkit-animation: moveFromDown 0.5s linear;
-          animation: moveFromDown 0.5s linear;
+  animation: moveFromDown 0.5s linear;
 }
 
 .navigation-menu__button {
@@ -675,8 +652,7 @@ li {
 .sidebar-menu li:hover .sidebar-submenu {
   opacity: 1;
   visibility: visible;
-  -webkit-animation: moveFromRight 0.3s linear;
-          animation: moveFromRight 0.3s linear;
+  animation: moveFromRight 0.3s linear;
 }
 
 .sidebar-menu li:hover .sidebar-menu-link {
@@ -808,6 +784,10 @@ li {
   display: none;
 }
 
+.catalog-menu__button {
+  display: none;
+}
+
 @media (max-width: 428px) {
   .logo {
     background-size: 50%;
@@ -843,6 +823,9 @@ li {
     width: 100%;
     height: 2px;
     background-color: #95B03C;
+    display: block;
+  }
+  .catalog-menu__button {
     display: block;
   }
 }
@@ -902,3 +885,4 @@ li {
   position: absolute;
   z-index: 50000;
 }
+/*# sourceMappingURL=style.css.map */
