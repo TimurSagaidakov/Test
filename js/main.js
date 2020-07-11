@@ -23,8 +23,18 @@ $(document).ready(function () {
         $('.services-submenu').toggleClass('services-active');
         $('.navigation-menu__link span').addClass('menu__title');
         $('.mobile-menu__text').css('border', 'none');
+        $('.sidebar-menu__button').css('display', 'none');        
+    });
+    $('#company').on('click', function(){
+        $('.navigation-submenu').addClass('company-active');  
+        $('.navigation-submenu').css('animation', 'none');  
+        $('.navigation-submenu').css('border-bottom', '1px solid #f2f2f2');
+        $('#catalog').css('display', 'none');
+        $('#services').css('display', 'none');
+        $('.navigation-menu__link span').addClass('menu__title');
+        $('.mobile-menu__text').css('border', 'none');
         $('.sidebar-menu__button').css('display', 'none');
-        
+
     });
     $('.menu-back-button').on('click', function(){
         $('.sidebar-menu').removeClass('catalog-active');
@@ -34,6 +44,8 @@ $(document).ready(function () {
         $('.mobile-contacts').css('display', 'block');
         $('.sidebar-menu__button').css('display', 'block');
         $('#catalog').css('display', 'block');
+        $('#services').css('display', 'block');
+
     });
     $('.menu-back__close').on('click',function(){
         $('.navigation-menu').removeClass('mobile-show');
@@ -43,5 +55,6 @@ $(document).ready(function () {
         $('.mobile-contacts').css('display', 'none');
         $('.sidebar-menu__button').css('display', 'block');
         $('#catalog').css('display', 'block');
+        $('#services').css('display', 'block');
     });
 }); 

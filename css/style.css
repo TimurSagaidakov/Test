@@ -477,9 +477,15 @@ li {
   .comparison__counter, .basket__counter, .favorites__counter {
     right: -5px;
   }
+  #company {
+    display: none;
+  }
 }
 
 @media (max-width: 428px) {
+  #company {
+    display: block;
+  }
   .navigation {
     flex-basis: 10%;
     align-items: center;
@@ -766,6 +772,10 @@ li {
   fill: #3C3C3B;
 }
 
+.services-submenu {
+  display: none;
+}
+
 @media (max-width: 428px) {
   .logo {
     background-size: 50%;
@@ -821,7 +831,19 @@ li {
   display: block;
   visibility: visible;
   position: absolute;
-  margin-top: 10px;
+  margin-top: 20px;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #fff;
+  height: 100vh;
+}
+
+.company-active {
+  display: block;
+  visibility: visible;
+  position: absolute;
+  margin-top: 40px;
   left: 0;
   z-index: 9999;
   width: 100%;
