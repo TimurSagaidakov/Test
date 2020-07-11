@@ -101,6 +101,25 @@ li {
   background-color: #95B03C;
 }
 
+.catalog-menu__button {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  fill: #3C3C3B;
+}
+
+@-webkit-keyframes moveFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 @keyframes moveFromRight {
   from {
     opacity: 0;
@@ -109,6 +128,17 @@ li {
   to {
     opacity: 1;
     transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes moveFromDown {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 
@@ -197,7 +227,8 @@ li {
 .navigation-menu li:hover .navigation-submenu {
   visibility: visible;
   opacity: 1;
-  animation: moveFromDown 0.5s linear;
+  -webkit-animation: moveFromDown 0.5s linear;
+          animation: moveFromDown 0.5s linear;
 }
 
 .navigation-menu__button {
@@ -644,7 +675,8 @@ li {
 .sidebar-menu li:hover .sidebar-submenu {
   opacity: 1;
   visibility: visible;
-  animation: moveFromRight 0.3s linear;
+  -webkit-animation: moveFromRight 0.3s linear;
+          animation: moveFromRight 0.3s linear;
 }
 
 .sidebar-menu li:hover .sidebar-menu-link {
@@ -862,4 +894,11 @@ li {
   background-color: #fff;
   height: 100vh;
 }
-/*# sourceMappingURL=style.css.map */
+
+.active {
+  display: block;
+  visibility: visible;
+  transform: translateX(-100%);
+  position: absolute;
+  z-index: 50000;
+}

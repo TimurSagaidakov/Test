@@ -1,7 +1,6 @@
 $(document).ready(function( ) {
-    if ($(window).width()<428){
-        $('#company').unbind('mouseenter').unbind('mouseleave');
-        $('#buyer').unbind('mouseenter').unbind('mouseleave');
+    $('.navigation-menu li').unbind('mouseenter mouseleave');
+    if ($(window).width()<750){        
     $('.menu-btn').on('click',function(){
         $('.navigation-menu').addClass('mobile');
         $('.navigation-menu').addClass('mobile-show');
@@ -61,7 +60,6 @@ $(document).ready(function( ) {
         $('#catalog').css('display', 'block');
         $('#services').css('display', 'block');
         $('#company').css('display', 'block');
-
     });
     $('.menu-back__close').on('click',function(){
         $('.navigation-menu').removeClass('mobile-show');
@@ -71,6 +69,7 @@ $(document).ready(function( ) {
         $('#catalog').css('display', 'block');
         $('#services').css('display', 'block');
         $('#company').css('display', 'block');
+        $('.sidebar-menu').removeClass('catalog-active');
     });
 };
 
