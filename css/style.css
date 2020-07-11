@@ -50,6 +50,48 @@ li {
   padding: 0;
 }
 
+.lock {
+  overflow: hidden;
+}
+
+.delete {
+  display: none;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.menu-back {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 25px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  visibility: hidden;
+}
+
+.menu-back button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.menu-back span {
+  padding-left: 14px;
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  color: #AEAEAE;
+}
+
 @keyframes moveFromRight {
   from {
     opacity: 0;
@@ -719,7 +761,7 @@ li {
   }
   .sidebar-menu.active {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 130px;
     z-index: 9999;
     width: 100%;
