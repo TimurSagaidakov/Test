@@ -15,3 +15,41 @@ ul
     padding: 0
 li
     padding: 0
+.lock
+    overflow: hidden
+.delete
+    display: none
+.menu-back
+    position: absolute
+    z-index: 9999
+    top: 0
+    left: 0
+    width: 100%
+    height: 80px
+    padding: 25px 14px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: #fff
+    visibility: hidden
+    button
+        border: none
+        background-color: transparent
+        outline: none
+    span
+        padding-left: 14px
+        +regular
+        font-size: 14px
+        color: #AEAEAE    
+.menu__title
+    font-size: 20px
+    color: $primary-text
+    position: fixed
+    &::after
+        content: ''
+        height: 2px
+        display: block
+        background-color: $secondary-bg
+    
+    
+    

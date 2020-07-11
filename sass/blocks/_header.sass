@@ -27,15 +27,16 @@
         letter-spacing: 0.06em
         margin: 10px 0 10px -10%
         &.mobile
-            position: fixed
+            position: fixed            
             left: 10%
-            display: block
             width: 100%
             height: 100vh
             background-color: #fff
             font-size: 14px
             margin-top: -25px
             z-index: 1000
+            &-show
+                display: block
         li
             position: relative
             &:hover
@@ -109,7 +110,8 @@
             &__svg
                 fill: $secondary-text    
 .mobile-menu__text
-    padding: 22px 14px                    
+    padding: 22px 14px  
+    border-bottom: 1px solid #F2F2F2                  
 .feedback
     flex-basis: 50%
     background-color: $secondary-bg
@@ -138,6 +140,8 @@
                 font-size: 1.2rem
                 display: block
                 margin-left: 10px
+            &__marker
+                fill: white
 .functions
     border-right: 1px solid rgba(255, 255, 255, 0.25)
     border-bottom: 1px solid rgba(255, 255, 255, 0.25)
@@ -213,7 +217,7 @@
         border: none
         padding: 9px 22px
 .mobile__hidden
-   display: none
+    display: none
 @media  (max-width: 1280px)
     .comparison__counter, .basket__counter, .favorites__counter
         right: -5px
@@ -266,6 +270,34 @@
             display: block
     .mobile__hidden
         display: block
-       
+.mobile-contacts
+    position: fixed
+    top: 70%
+    left: 2%
+    z-index: 5000
+    display: none
+    &__free
+        font-size: 14px
+        +regular
+        color: $primary-text
+    &__phone
+        +semibold
+        font-size: 18px
+        color: $primary-text
+        margin-top: 5px
+        margin-bottom: 15px
+        text-decoration: none
+        display: block
+    &-city
+        display: flex
+        text-decoration: none
+        &__name
+            color: $primary-text
+            font-size: 14px
+            margin-left: 10px
+            text-decoration: none
+            border-bottom: 1px dashed
+
+
 
     
