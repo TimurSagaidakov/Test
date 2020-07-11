@@ -485,9 +485,6 @@ li {
   .comparison__counter, .basket__counter, .favorites__counter {
     right: -5px;
   }
-  #company {
-    display: none;
-  }
 }
 
 @media (max-width: 428px) {
