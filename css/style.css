@@ -790,6 +790,7 @@ li {
 
 .sidebar-menu li:hover .sidebar-menu-link__text {
   color: #95B03C;
+  text-transform: uppercase;
 }
 
 .sidebar-menu-link {
@@ -886,6 +887,7 @@ li {
 
 .sidebar-submenu-link:hover .sidebar-submenu-link__text {
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .sidebar-submenu-link__text {
@@ -1311,5 +1313,161 @@ li {
   background-image: url(../img/offers-8.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+.bestseller {
+  margin-top: 8rem;
+}
+
+.bestseller-slider {
+  display: grid;
+  grid-template: 1fr/ 25% 25% 25% 25%;
+}
+
+@media (max-width: 950px) {
+  .bestseller-slider {
+    grid-template: 1fr 1fr/ 1fr 1fr;
+  }
+}
+
+.bestseller-item {
+  width: 100%;
+  border: 1px solid #EBEBEB;
+}
+
+.bestseller__title {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 4rem;
+  color: #3C3C3B;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+
+.bestseller-content {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.bestseller-content-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.bestseller-content-head__id {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.4rem;
+  color: #3C3C3B;
+  text-transform: uppercase;
+}
+
+.bestseller-content-head__available {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.4rem;
+  color: #95B03C;
+}
+
+.bestseller-content__name {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #3C3C3B;
+}
+
+.bestseller-content-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 9px 0 50px 0;
+}
+
+.bestseller-content-price__new {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  color: #3C3C3B;
+}
+
+.bestseller-content-price__old {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  color: #C2C2C2;
+  text-decoration: line-through;
+}
+
+.bestseller-content img {
+  width: 100%;
+}
+
+.bestseller-head {
+  display: flex;
+}
+
+.bestseller-head__hit {
+  padding: 5px;
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  background-color: #3C3C3B;
+  text-transform: uppercase;
+}
+
+.bestseller-head__discount {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #E94141;
+  padding: 5px;
+}
+
+.bestseller .slick-track {
+  height: auto;
+}
+
+.bestseller .slick-arrow {
+  display: none !important;
+}
+
+.bestseller-dots {
+  position: absolute;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.bestseller-dots li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin-left: 10px;
+  background-color: #ffffff;
+  border: 1px solid #3C3C3B;
+}
+
+.bestseller-dots li.slick-active {
+  background-color: #95B03C;
+}
+
+.bestseller-dots button {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

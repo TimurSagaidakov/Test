@@ -1,0 +1,97 @@
+.bestseller
+    margin-top: 8rem
+    &-slider
+        display: grid
+        grid-template: 1fr/ 25% 25% 25% 25%
+        @media ( max-width:  950px)
+            grid-template: 1fr 1fr/ 1fr 1fr
+    &-item
+        width: 100%
+        border: 1px solid #EBEBEB
+    &__title
+        +regular
+        font-size: 4rem
+        color: $primary-text
+        font-weight: bold
+        margin-bottom: 4rem
+    &-content
+        text-decoration: none
+        outline: none
+        display: block
+        width: 80%
+        margin: 0 auto
+        &-head
+            display: flex
+            justify-content: space-between
+            margin: 10px 0
+            &__id
+                +regular
+                font-size: 1.4rem
+                color: $primary-text
+                text-transform: uppercase
+            &__available
+                +regular
+                font-size: 1.4rem
+                color: $secondary-bg
+        &__name
+            +regular
+            font-weight: bold
+            font-size: 2rem
+            color: $primary-text
+        &-price
+            display: flex
+            justify-content: space-between
+            margin: 9px 0 50px 0
+            &__new
+                +regular
+                font-size: 1.6rem
+                color: $primary-text
+            &__old
+                +regular
+                font-size: 1.6rem
+                color: #C2C2C2
+                text-decoration: line-through
+        img
+            width: 100%
+    &-head
+        display: flex
+        &__hit
+            padding: 5px
+            +regular
+            color: $secondary-text
+            background-color: $primary-text
+            text-transform: uppercase
+        &__discount
+            +regular
+            color: $secondary-text
+            text-transform: uppercase
+            background-color: #E94141
+            padding: 5px
+    .slick
+        &-track
+            height: auto
+        &-arrow
+            display: none !important
+    &-dots
+        position: absolute
+        list-style: none
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+        li
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background-color: #ffffff
+            margin-left: 10px
+            background-color: #ffffff
+            border: 1px solid $primary-text 
+            &.slick-active
+                background-color: $secondary-bg
+        button
+            display: none
+            
+            
+
+

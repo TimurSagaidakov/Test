@@ -82,4 +82,21 @@ $(document).ready(function( ) {
         prevArrow: $('.hero-main-arrow__top'),
         nextArrow: $('.hero-main-arrow__bottom')
     });
+    $('.bestseller-slider').slick({
+        infinite: true,
+        dots: true,
+        dotsClass: 'bestseller-dots',
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        responsive: [
+            {
+                breakpoint: 950,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+    });
 }); 
