@@ -1,0 +1,31 @@
+.six
+    margin-top: 9rem
+.partners
+    margin-top: 3.5rem
+    display: grid
+    grid-template: 50% 50%/ 25% 25% 25% 25%
+    @media ( max-width:  1280px)
+        grid-template: 25% 25% 25% 25%/50% 50%
+    @media ( max-width:  428px)
+        display: block
+    &-item
+        display: grid
+        grid-template: 50% 50%/100%
+        min-height: 300px
+        text-decoration: none
+        border: 1px solid #EBEBEB
+        &:hover
+            box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.1)
+        &__text
+            +regular
+            font-size: 1.6rem
+            font-weight: bold
+            color: $primary-text
+            display: flex
+            align-items: center
+            justify-content: center
+        &__img
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            width: 100%
