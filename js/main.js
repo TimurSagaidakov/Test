@@ -71,6 +71,15 @@ $(document).ready(function( ) {
         $('#company').css('display', 'block');
         $('.sidebar-menu').removeClass('catalog-active');
     });
+    
 };
-
+    $('.hero-main-wrapper').slick({
+        infinite: true,
+        dots: true,
+        dotsClass: 'hero-dots',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.hero-main-arrow__top'),
+        nextArrow: $('.hero-main-arrow__bottom')
+    });
 }); 

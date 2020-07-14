@@ -4,8 +4,17 @@ html
     font-size: 10px
     @media  (max-width: 1280px)
         font-size: 9px
-    @media  (min-width:428px) and (max-width: 1280px)
-        min-width: 1280px
+    @media ( max-width: 428px )
+        font-size: 7px
+.main 
+    width: 80%
+    float: left
+    order: 3
+    @media ( max-width: 428px )
+        width: 100%
+.container
+    width: 100%
+    padding: 0 3%
 @media  (max-width: 428px)
     body
         display: flex
@@ -56,5 +65,5 @@ li
     top: 20px
     right: 10px
     fill: $primary-text
-   
+  
     

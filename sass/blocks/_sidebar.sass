@@ -44,6 +44,8 @@
     @media ( max-width:  425px)
         display: block
 .sidebar
+    position: relative
+    z-index: 1000
     box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1)
     width: 20%
     background-color: #fff
@@ -125,14 +127,14 @@
             +semibold
             font-size: 1.4rem
             color: $primary-text
-            border-top: 1px solid #ececec
-            border-left: 1px solid #ececec
+            border: 1px solid #ececec
             display: flex
             align-items: center
             min-width: 80%
             justify-content: space-between
             height: 54px 
-            transition: 0.2s                         
+            transition: 0.2s  
+            border-radius: 5px
             &:last-of-type
                 border-bottom: 1px solid #ececec
             &:hover
