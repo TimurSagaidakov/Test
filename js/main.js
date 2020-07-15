@@ -1,6 +1,6 @@
 $(document).ready(function( ) {
     $('.navigation-menu li').unbind('mouseenter mouseleave');
-    if ($(window).width()<750){        
+    if ($(window).width()<770){        
     $('.menu-btn').on('click',function(){
         $('.navigation-menu').addClass('mobile');
         $('.navigation-menu').addClass('mobile-show');
