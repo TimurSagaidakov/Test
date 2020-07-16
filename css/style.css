@@ -81,7 +81,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background: linear-gradient(to right, white 60%, rgba(255, 255, 255, 0));
   visibility: hidden;
   position: fixed;
 }

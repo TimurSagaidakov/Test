@@ -1,6 +1,7 @@
 $(document).ready(function( ) {
     if ($(window).width()<771){  
         $('.menu-btn').on('click',function(){
+            $('.sidebar::after').css('display', 'none');
             $('.navigation-menu').addClass('mobile');
             $('.navigation-menu').addClass('mobile-show');
             $('.navigation-menu__link').addClass('mobile-menu__text');
