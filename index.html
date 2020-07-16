@@ -17,8 +17,8 @@
             
             <nav class="navigation-wrapper">
                 <ul class="navigation-menu">
-                    <li >
-                        <div id="catalog" class="navigation-menu__link mobile__hidden">
+                    <li class="mobile__hidden">
+                        <div id="catalog" class="navigation-menu__link">
                             <span>    Каталог</span>
                             <div class="sidebar-menu__button">
                                 <svg width="14" height="14" >
@@ -28,8 +28,8 @@
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div id="services" class="navigation-menu__link mobile__hidden">
+                    <li class="mobile__hidden">
+                        <div id="services" class="navigation-menu__link">
                             <span>   Услуги </span>
                             <div class="sidebar-menu__button">
                                 <svg width="14" height="14" >
@@ -282,7 +282,7 @@
             </div>
             <div class="consultation">
                 <button class="consultation__small">Консультация</button>
-                <button class="consultation__button">
+                <button href="" class="consultation__button">
                     Запросить <br> консультацию
                 </button> <!-- /.consultation button -->
             </div>
@@ -346,7 +346,7 @@
                         </a>
                         <!-- /.sidebar-submenu-link -->
                     </li>
-                        <a href="#" class="sidebar-submenu-link">
+                    <a href="#" class="sidebar-submenu-link">
                             <div class="sidebar-submenu-link__svg">
                                 <svg width="31" height="31">
                                     <use xlink href="img/icons.svg#submenu-1">
@@ -1134,9 +1134,16 @@
 <div class="menu-back">
     <button class="menu-back-button">
         <svg width="19" height="8" >
-            <use xlink href="img/icons.svg#arrow-back"></use>
+            <use xlink href="img/icons.svg#arrow-back">
+            </use>
         </svg>
         <span>Назад</span>
+    </button>
+    <button class="menu-back__close">
+        <svg width="16" height="15" >
+            <use xlink href="img/icons.svg#close">
+            </use>
+        </svg>
     </button>
 </div> 
 
@@ -1989,4 +1996,5 @@
 <script src="js/slick.min2.js"></script>
 <script src="js/main.js"></script>
 </body>
+
 </html>
