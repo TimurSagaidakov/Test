@@ -76,6 +76,14 @@ $(document).ready(function( ) {
             $('.sidebar-menu').removeClass('catalog-active');
             $('.menu-back').css('transform', 'translateX(2000px)');
         });
+        $('.navigation-search-button').on('click', function(){
+            $('.navigation-search__input').animate({
+                width: "150px",
+            },1000);            
+            $('.navigation-search').css('z-index', '3');
+            $('.navigation-search').toggleClass('search-mobile');
+            $('.navigation-search-button svg').css('fill', '#95B03C');
+        });
     };
     $('.hero-main-wrapper').slick({
         infinite: true,
