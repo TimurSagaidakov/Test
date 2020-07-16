@@ -13,7 +13,7 @@
 .navigation
     flex-basis: 50% 
     @media  (max-width: 1280px)
-        flex-basis: 75%    
+        flex-basis: 100%
     &-wrapper
         display: flex
         justify-content: center
@@ -28,7 +28,7 @@
         margin: 10px 0 10px 0
         &.mobile
             position: fixed            
-            left: 10%
+            left: 0
             width: 100%
             background-color: #fff
             font-size: 14px
@@ -128,6 +128,8 @@
         display: flex
         flex-direction: column
         justify-content: center
+        @media (min-width: 771px) and ( max-width: 1200px )
+            display: none
         &__free
             display: block
             font-size: 1.2rem
@@ -225,6 +227,8 @@
 @media  (max-width: 1280px)
     .comparison__counter, .basket__counter, .favorites__counter
         right: -5px
+    .feedback   
+        flex-basis: 25%
 @media ( max-width: 770px )
     #company
         display: block
