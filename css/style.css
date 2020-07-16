@@ -59,6 +59,7 @@ ul {
 
 li {
   padding: 0;
+  margin: 0;
 }
 
 .lock {
@@ -1118,6 +1119,10 @@ li {
   }
 }
 
+.hero-main__img {
+  object-fit: scale-down;
+}
+
 .hero-main-arrow__top {
   position: absolute;
   z-index: 5;
@@ -1238,8 +1243,29 @@ li {
   margin-left: 20px;
 }
 
+@media (max-width: 428px) {
+  .offers-item__text {
+    margin-left: 0;
+  }
+}
+
 .offers-item__svg img {
   width: 100%;
+}
+
+@media (max-width: 428px) {
+  .offers-item__svg {
+    width: 20%;
+  }
+}
+
+@media (max-width: 428px) {
+  .offers-item {
+    height: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 
 .offers__description {
@@ -1263,7 +1289,6 @@ li {
 .offers-1 {
   background-image: url(../img/offers-1.png);
   background-repeat: no-repeat;
-  background-size: cover;
   background-size: 100% 100%;
 }
 
@@ -1599,7 +1624,7 @@ li {
 
 @media (min-width: 428px) and (max-width: 767px) {
   .contacts {
-    grid-template: 100%/ 50% 50%;
+    grid-template: 100%/ 45% 45%;
     grid-column-gap: 30px;
   }
 }
@@ -1650,7 +1675,6 @@ li {
 .contacts-company-feedback {
   display: flex;
   justify-content: space-between;
-  margin-left: 5px;
 }
 
 .contacts-company-feedback__phone {
@@ -1789,5 +1813,190 @@ li {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 3rem;
+}
+
+.ninth {
+  background-color: #95B03C;
+}
+
+.subscription {
+  display: flex;
+  height: 15rem;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+@media (max-width: 1020px) {
+  .subscription {
+    display: block;
+    height: auto;
+  }
+}
+
+.subscription-left {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1020px) {
+  .subscription-left {
+    justify-content: center;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 428px) {
+  .subscription-left {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 1020px) {
+  .subscription__svg {
+    display: none;
+  }
+}
+
+.subscription-text {
+  line-height: 3rem;
+  margin-left: 4rem;
+}
+
+@media (max-width: 1020px) {
+  .subscription-text {
+    margin-left: 0;
+  }
+}
+
+.subscription-text__title {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+@media (max-width: 428px) {
+  .subscription-text__title {
+    font-size: 20px;
+  }
+}
+
+.subscription-text__description {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+.subscription-input {
+  width: 50%;
+  display: flex;
+  padding-bottom: 3.5rem;
+}
+
+@media (max-width: 1020px) {
+  .subscription-input {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.subscription-input__area {
+  width: 70%;
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.4rem;
+  color: #3C3C3B;
+  padding-left: 2rem;
+  outline: none;
+}
+
+.subscription-input__button {
+  width: 30%;
+  padding: 2rem 0;
+  border: none;
+  background-color: #3C3C3B;
+  color: #ffffff;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+.subscription-input__button:hover {
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 1rem;
+}
+
+.footer-policy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-policy__link {
+  flex-grow: 1;
+  margin-top: 30px;
+}
+
+@media (max-width: 1020px) {
+  .footer-policy {
+    display: block;
+  }
+}
+
+.footer-policy__price {
+  font-size: 1.4rem;
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  color: #b0b0b0;
+}
+
+.footer-payment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 2;
+  margin-top: 3rem;
+}
+
+.footer-payment__title {
+  font-size: 1.4rem;
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  color: #3C3C3B;
+  margin-right: 20px;
+}
+
+.footer-payment-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-style: normal;
+  color: #3C3C3B;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+.ninth
+    background-color: $secondary-bg
+.subscription
+    display: flex
+    height: 15rem
+    align-items: center
+    width: 95%
+    margin: 0 auto
+    justify-content: space-between
+    @media ( max-width: 1020px )
+        display: block
+        height: auto   
+    &-left
+        display: flex
+        align-items: center   
+        @media ( max-width: 1020px )
+            justify-content: center
+            padding-top:  20px   
+        @media ( max-width: 428px )
+            justify-content: start
+    &__svg
+        @media ( max-width: 1020px )
+            display: none
+    &-text
+        line-height: 3rem
+        margin-left: 4rem
+        @media ( max-width: 1020px )
+            margin-left: 0
+        &__title
+            +regular
+            color: $secondary-text
+            font-weight: bold
+            font-size: 3rem
+            @media ( max-width: 428px )
+                font-size: 20px
+        &__description
+            +regular
+            color: $secondary-text
+            font-size: 1.6rem
+    &-input
+        width: 50%
+        display: flex
+        padding-bottom: 3.5rem
+        @media ( max-width: 1020px )
+            margin-top: 20px
+            width: 100%
+        &__area
+            width: 70%
+            +regular
+            font-size: 1.4rem
+            color: $primary-text
+            padding-left: 2rem
+            outline: none
+        &__button
+            width: 30%
+            padding: 2rem 0
+            border: none
+            background-color: #3C3C3B
+            color: $secondary-text
+            font-size: 1.6rem
+            outline: none
+            &:hover
+                cursor: pointer

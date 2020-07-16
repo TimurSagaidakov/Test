@@ -28,9 +28,18 @@
             font-size: 2rem
             color: $secondary-text
             margin-left: 20px   
+            @media ( max-width: 428px )
+                margin-left: 0
         &__svg
             img
                 width: 100%
+            @media ( max-width: 428px )
+                width: 20%
+        @media ( max-width: 428px )
+            height: 100px
+            flex-direction: column
+            align-items: flex-start
+            justify-content: space-between
     &__description
         position: absolute
         width: 100%
@@ -48,9 +57,7 @@
     &-1
         background-image: url(../img/offers-1.png)
         background-repeat: no-repeat 
-        background-size: cover
         background-size: 100% 100%
-
     &-2
         background-image: url(../img/offers-2.png)
         background-repeat: no-repeat 

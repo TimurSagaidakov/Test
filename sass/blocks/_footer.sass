@@ -1,0 +1,41 @@
+.footer
+    margin-top: 1rem
+    &-policy
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        &__link
+            flex-grow: 1
+            margin-top: 30px
+        @media ( max-width:  1020px)
+            display: block
+        &__price
+            font-size: 1.4rem
+            +regular
+            color: #b0b0b0
+    &-payment 
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        flex-grow: 2
+        margin-top: 3rem
+        &__title
+            font-size: 1.4rem
+            +regular
+            color: $primary-text
+            margin-right: 20px
+        &-list  
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-grow: 1
+            max-width: 300px
+            min-width: 300px
+    ul
+        list-style: none
+    a
+        text-decoration: none
+        font-size: 1.4rem
+        +regular
+        color: $primary-text
