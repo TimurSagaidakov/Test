@@ -81,7 +81,7 @@ $(document).ready(function( ) {
                 width: "150px",
             },1000);    
             $('.navigation-search').css('z-index', '3');
-            $('.navigation-search').toggleClass('search-mobile');
+            $('.navigation-search').addClass('search-mobile');
             $('.navigation-search-button svg').css('fill', '#95B03C');
         });
         $(document).mouseup(function (e){ 
