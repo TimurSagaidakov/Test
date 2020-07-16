@@ -156,6 +156,15 @@ li {
   }
 }
 
+@keyframes blinkLogo {
+  0% {
+    fill: #3C3C3B;
+  }
+  100% {
+    fill: #95B03C;
+  }
+}
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -693,10 +702,14 @@ li {
 }
 
 .logo {
-  background: url(../img/logo.png) no-repeat;
+  background: url("../img/logo.png") no-repeat;
   background-position: center;
   background-size: 80%;
   height: 47px;
+}
+
+.logo svg {
+  animation: blinkLogo 3s 100;
 }
 
 .menu-btn {
