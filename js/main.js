@@ -79,10 +79,23 @@ $(document).ready(function( ) {
         $('.navigation-search-button').on('click', function(){
             $('.navigation-search__input').animate({
                 width: "150px",
-            },1000);            
+            },1000);    
             $('.navigation-search').css('z-index', '3');
             $('.navigation-search').toggleClass('search-mobile');
             $('.navigation-search-button svg').css('fill', '#95B03C');
+        });
+        $(document).mouseup(function (e){ 
+            var div = $(".navigation-search"); 
+            if (!div.is(e.target) 
+                && div.has(e.target).length === 0) { 
+                $('.navigation-search__input').animate({
+                    width: '0',
+                },1000); 
+                $('.navigation-search-button svg').css('fill', '#000000');
+                setTimeout(function(){
+                    $('.navigation-search').removeClass('search-mobile');
+                },1000);
+            };
         });
     };
     $('.hero-main-wrapper').slick({
