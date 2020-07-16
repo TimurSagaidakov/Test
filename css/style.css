@@ -1299,6 +1299,12 @@ li {
   opacity: 1;
 }
 
+@media (max-width: 428px) {
+  .offers-link {
+    height: 25rem;
+  }
+}
+
 .offers-item {
   display: flex;
   min-width: 100%;
